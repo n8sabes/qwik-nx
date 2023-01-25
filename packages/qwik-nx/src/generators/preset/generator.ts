@@ -9,5 +9,6 @@ export default async function (
   options.directory = '';
   options.name = options.qwikAppName ?? options.name;
   options.style = options.qwikAppStyle ?? options.style;
+  options.e2eTestRunner = 'none'; // temporary disabling e2e here, because it throws an error within "create-nx-workspace"
   return applicationGenerator(tree, options);
 }
